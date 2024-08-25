@@ -1,0 +1,36 @@
+name: Android CI
+
+on:
+  push:
+    branches:
+      - main  # ou a branch onde você deseja disparar o workflow
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build and Test
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up JDK
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'  # ou a versão do JDK que seu projeto requer
+        distribution: 'zulu'
+
+    - name: Build with Gradle
+      run: ./gradlew build --no-daemon
+
+    - name: Run unit tests
+      run: ./gradlew test --no-daemon
+
+    - name: Upload APK
+      uses: actions/upload-artifact@v3
+      with:
+        name: apk
+        path: app/build/outputs/apk/debug/app-debug.apk

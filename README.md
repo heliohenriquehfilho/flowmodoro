@@ -15,7 +15,7 @@ Dependências:
 - Python 3.7 ou superior.
 
 Como usar:
-1. Instale o apk.
+1. Instale o apk no master.
 
 Autor:
 - [Seu Nome ou GitHub]](https://github.com/heliohenriquehfilho)

@@ -18,4 +18,4 @@ Como usar:
 1. Instale o apk no master.
 
 Autor:
-- [Seu Nome ou GitHub]](https://github.com/heliohenriquehfilho)
+- (https://github.com/heliohenriquehfilho)
